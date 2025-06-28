@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 24px 0 8px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+#kanbanBoard {
+    display: flex;
+    column-gap: 24px;
+    padding: 32px 48px;
+    height: calc(100vh - 80px);
+    width: 100vw;
+    align-items: flex-start;
+}
+
+.swimlane {
+    border-radius: 12px;
+    background: #fff;
+    border: 1.5px solid #e0e0e0;
+    flex-basis: 1;
+    flex-shrink: 0;
+    flex-grow: 1;
+    min-width: 220px;
+    min-height: 400px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 0 0 16px 0;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swimlane h2 {
+    margin: 0;
+    padding: 18px 0 12px 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #333;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    background: #fafafa;
+    border-radius: 12px 12px 0 0;
+}
+
+.card {
+    width: 90%;
+    margin: 16px 0 0 0;
+    padding: 18px 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    cursor: grab;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: none;
+}
+
+.toDo .card {
+    background-color: #ffe066;
+    color: #333;
+}
+.inProgress .card {
+    background-color: #7be495;
+    color: #222;
+}
+.done .card {
+    background-color: #222;
+    color: #fff;
+}
+.hold .card {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+#dragged {
+    box-shadow: 0 0 0 3px #0078d7;
+    opacity: 0.7;
+}
